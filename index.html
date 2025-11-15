@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaşar Kemal: Çukurova'nın Sesi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles for a richer, more 'afilli' theme */
+        :root {
+            --primary-red: #880e4f; /* Deep Maroon / Koyu Bordo */
+            --secondary-gold: #f59e0b; /* Amber / Altın */
+            --bg-dark: #1c1917; /* Stone Black / Koyu Toprak */
+            --text-light: #fef3c7; /* Light Cream / Açık Altın */
+        }
+        .text-yasar-primary { color: var(--primary-red); }
+        .bg-yasar-dark { background-color: var(--bg-dark); }
+        .text-yasar-secondary { color: var(--secondary-gold); }
+        .border-yasar-secondary { border-color: var(--secondary-gold); }
+
+        /* Custom shadow for dramatic effect */
+        .shadow-custom {
+            box-shadow: 0 15px 30px -5px rgba(136, 14, 79, 0.5), 0 8px 15px -5px rgba(245, 158, 11, 0.5);
+        }
+
+        /* Hover effect for cards */
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 40px -5px rgba(136, 14, 79, 0.7);
+        }
+
+        /* Custom scrollbar styling (optional but looks great on dark themes) */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background-color: var(--primary-red); border-radius: 10px; }
+        ::-webkit-scrollbar-track { background-color: var(--bg-dark); }
+
+    </style>
+</head>
+<body class="bg-yasar-dark text-text-light min-h-screen p-4 md:p-10 flex flex-col items-center font-serif">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'yasar-maroon': 'var(--primary-red)',
+                        'yasar-gold': 'var(--secondary-gold)',
+                        'yasar-bg': 'var(--bg-dark)',
+                        'yasar-text': 'var(--text-light)',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Ana Konteyner -->
+    <div class="w-full max-w-5xl bg-stone-900 border-4 border-yasar-maroon shadow-custom rounded-3xl overflow-hidden p-6 md:p-12 space-y-12 transition duration-500">
+
+        <!-- Başlık ve Destansı Giriş -->
+        <header class="text-center pb-6 border-b border-yasar-gold/50">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yasar-gold to-yasar-maroon tracking-tight transition duration-700 hover:scale-[1.03] transform">
+                YAŞAR KEMAL
+            </h1>
+            <p class="text-2xl md:text-3xl text-yasar-gold mt-4 italic font-sans animate-pulse">
+                "O, Çukurova'nın Sesidir."
+            </p>
+        </header>
+
+        <!-- Biyografi ve Portre Bölümü -->
+        <section class="flex flex-col lg:flex-row items-start lg:space-x-10">
+            <div class="lg:w-1/3 mb-8 lg:mb-0 flex-shrink-0 relative">
+                <!-- Yaşar Kemal Portresi (Kullanıcının verdiği resim) -->
+                <div class="w-full aspect-[4/5] rounded-xl overflow-hidden border-4 border-yasar-gold shadow-2xl shadow-yasar-maroon/70">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ya%C5%9Far_Kemal.jpg"
+                         alt="Yaşar Kemal'in Siyah Beyaz Portresi"
+                         class="w-full h-full object-cover transition duration-500 ease-in-out hover:opacity-90">
+                </div>
+            </div>
+            <div class="lg:w-2/3 space-y-8">
+                <h2 class="text-4xl font-bold text-yasar-gold border-b-2 border-yasar-maroon pb-3">Anadolu'nun Vicdanı</h2>
+                <p class="text-yasar-text leading-relaxed text-xl first-letter:text-6xl first-letter:font-bold first-letter:text-yasar-gold first-letter:mr-2 first-letter:float-left">
+                    Kemal Sadık Gökçeli adıyla dünyaya gelen Yaşar Kemal, sadece bir yazar değil, aynı zamanda Anadolu'nun derin acılarını, isyanını ve umudunu dile getiren bir destancıydı. Çocukluğu boyunca dinlediği halk hikayeleri ve ağıtlar, onun edebi dilinin temelini oluşturdu ve eserlerine benzersiz bir ritim kattı.
+                </p>
+                <p class="text-yasar-text leading-relaxed text-lg bg-yasar-maroon/20 p-4 rounded-lg italic border-l-4 border-yasar-gold">
+                    Romanlarında özellikle Çukurova'nın verimli topraklarında süregelen **ağalık düzeni**, köylülerin **yoksulluğu** ve doğanın görkemi arasındaki dramatik çatışmayı işledi. Eserleri, ezilenin sesi, umudun simgesi ve toplumsal adaletin feryadı oldu.
+                </p>
+            </div>
+        </section>
+
+        <!-- Eserler Galeri Bölümü (Kitap Kapakları İçin) -->
+        <section class="pt-10">
+            <h2 class="text-4xl font-bold text-yasar-gold text-center mb-10 border-b-2 border-yasar-maroon pb-3">Ölümsüz Eserlerinden Bazıları</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Kitap Kartı 1: İnce Memed (Görsel İçerikli) -->
+                <div class="bg-stone-800 p-4 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="h-60 w-full overflow-hidden rounded-lg mb-4 border-2 border-yasar-gold flex items-center justify-center bg-gray-900">
+                        <img src="https://placehold.co/400x500/880e4f/fef3c7?text=İNCE+MEMED+1.+CİLT+KAPAK"
+                             alt="İnce Memed Kitap Kapağı"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x500/880e4f/fef3c7?text=İNCE+MEMED+1.+CİLT+KAPAK';"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-yasar-gold">İnce Memed</h3>
+                    <p class="text-sm text-gray-400 mt-1">Eşkıyalık, ağalık düzeni ve isyan temalarını işleyen başyapıtı. (4 Cilt)</p>
+                </div>
+
+                <!-- Kitap Kartı 2: Yer Demir Gök Bakır (Görsel İçerikli) -->
+                <div class="bg-stone-800 p-4 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="h-60 w-full overflow-hidden rounded-lg mb-4 border-2 border-yasar-gold flex items-center justify-center bg-gray-900">
+                        <img src="https://placehold.co/400x500/f59e0b/1c1917?text=YER+DEMİR+GÖK+BAKIR+KAPAK"
+                             alt="Yer Demir Gök Bakır Kitap Kapağı"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x500/f59e0b/1c1917?text=YER+DEMİR+GÖK+BAKIR+KAPAK';"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-yasar-gold">Yer Demir Gök Bakır</h3>
+                    <p class="text-sm text-gray-400 mt-1">Toros köylülerinin baskı karşısında efsane yaratarak direnişi.</p>
+                </div>
+
+                <!-- Kitap Kartı 3: Yılanı Öldürseler (Placeholder) -->
+                <div class="bg-stone-800 p-4 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="h-60 w-full overflow-hidden rounded-lg mb-4 border-2 border-yasar-maroon flex items-center justify-center bg-yasar-maroon/20">
+                        <span class="text-yasar-maroon text-lg font-bold">YILANI ÖLDÜRSELER</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yasar-text">Yılanı Öldürseler</h3>
+                    <p class="text-sm text-gray-400 mt-1">Çocukluk travması ve töre cinayeti temalı güçlü bir eser.</p>
+                </div>
+
+                <!-- Kitap Kartı 4: Teneke (Placeholder) -->
+                <div class="bg-stone-800 p-4 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="h-60 w-full overflow-hidden rounded-lg mb-4 border-2 border-yasar-maroon flex items-center justify-center bg-yasar-maroon/20">
+                        <span class="text-yasar-maroon text-lg font-bold">TENEKE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yasar-text">Teneke</h3>
+                    <p class="text-sm text-gray-400 mt-1">Çeltik ağalarına karşı mücadele eden genç kaymakamın öyküsü.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Alıntılar ve Nobel Adaylığı -->
+        <section class="pt-10">
+            <h2 class="text-4xl font-bold text-yasar-gold text-center mb-8 border-b-2 border-yasar-maroon pb-3">Nobel Adayı ve Alıntılar</h2>
+
+            <div class="bg-stone-800 p-8 rounded-2xl border-l-8 border-yasar-gold shadow-inner shadow-yasar-maroon/30">
+                <blockquote class="text-2xl italic text-yasar-text mb-6">
+                    "Bir de luğat bilirim: Ayaklar baş olacak, başlar ayak. Bir gün."
+                </blockquote>
+                <p class="text-lg text-gray-300">
+                    Yaşar Kemal, defalarca **Nobel Edebiyat Ödülü**'ne aday gösterilmiş, eserleri 40'tan fazla dile çevrilerek Türk edebiyatını dünyaya tanıtan en önemli köprülerden biri olmuştur. O, sadece bir yazar değil, Türkiye'nin evrenselleşen sesidir. Edebiyatıyla insana ve doğaya olan sevgisini, zulme karşı isyanını ölümsüzleştirdi.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dipnot -->
+        <footer class="text-center pt-10 border-t border-yasar-maroon/50 mt-12">
+            <p class="text-sm text-gray-500 font-sans">
+                &copy; 2025 Yaşar Kemal Anısına | Sonsuz Teşekkürlerle.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
